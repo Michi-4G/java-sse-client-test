@@ -32,5 +32,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.jersey.media:jersey-media-sse:2.22.1" level="project" />
+    <orderEntry type="library" name="Maven: com.tinkerforge:tinkerforge:2.1.5" level="project" />
   </component>
 </module>
