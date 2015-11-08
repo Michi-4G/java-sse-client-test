@@ -26,7 +26,7 @@ public class SSEClient {
      * @param args
      * @throws IOException
      */
-    public static void main(String[] args) throws IOException, AlreadyConnectedException, TimeoutException, NotConnectedException {
+    public static void main(String[] args) throws IOException, AlreadyConnectedException, TimeoutException, NotConnectedException, InterruptedException {
 
 
 
@@ -37,10 +37,19 @@ public class SSEClient {
         // Don't use device before ipcon is connected
 
         // Set pin 2 and 3 to output high
-        io.setConfiguration((short)((1 << 2) | (1 << 3)), 'o', true);
+        //io.setConfiguration((short)((1 << 2) | (1 << 3)), 'o', true);
+        //io.setConfiguration((short)(1 << 1), 'o', true);
+        io.setConfiguration((short) 15, 'o', true);
+
+        Thread.sleep(1000);
 
         // Set pin 1 to output low
-        io.setConfiguration((short)(1 << 1), 'o', false);
+        io.setConfiguration((short)0, 'o', false);
+
+        Thread.sleep(100);
+
+        io.setConfiguration((short)0, 'o', true);
+
 
         //by enter -> pin 0 to low for 1 second, high afterwards
 
